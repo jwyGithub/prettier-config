@@ -1,1 +1,51 @@
-var n=Object.defineProperty;var s=Object.getOwnPropertyDescriptor;var o=Object.getOwnPropertyNames;var p=Object.prototype.hasOwnProperty;var u=(e,t)=>{for(var i in t)n(e,i,{get:t[i],enumerable:!0})},l=(e,t,i,a)=>{if(t&&typeof t=="object"||typeof t=="function")for(let r of o(t))!p.call(e,r)&&r!==i&&n(e,r,{get:()=>t[r],enumerable:!(a=s(t,r))||a.enumerable});return e};var d=e=>l(n({},"__esModule",{value:!0}),e);var g={};u(g,{default:()=>m});module.exports=d(g);function f(e){return{printWidth:140,tabWidth:4,useTabs:!1,semi:!0,singleQuote:!0,quoteProps:"as-needed",jsxSingleQuote:!0,trailingComma:"none",bracketSpacing:!0,bracketSameLine:!1,arrowParens:"avoid",insertPragma:!1,proseWrap:"never",htmlWhitespaceSensitivity:"strict",vueIndentScriptAndStyle:!1,endOfLine:"lf",embeddedLanguageFormatting:"auto",singleAttributePerLine:!1,...e||{}}}var m=f;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// index.ts
+var prettier_exports = {};
+__export(prettier_exports, {
+  prettier: () => prettier
+});
+module.exports = __toCommonJS(prettier_exports);
+function prettier(options) {
+  return {
+    printWidth: 140,
+    tabWidth: 4,
+    useTabs: false,
+    semi: true,
+    singleQuote: true,
+    quoteProps: "as-needed",
+    jsxSingleQuote: true,
+    trailingComma: "none",
+    bracketSpacing: true,
+    bracketSameLine: false,
+    arrowParens: "avoid",
+    insertPragma: false,
+    proseWrap: "never",
+    htmlWhitespaceSensitivity: "strict",
+    vueIndentScriptAndStyle: false,
+    endOfLine: "lf",
+    embeddedLanguageFormatting: "auto",
+    singleAttributePerLine: false,
+    ...options || {}
+  };
+}
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  prettier
+});

@@ -1,6 +1,7 @@
 {
     "name": "@jiangweiye/prettier-config",
-    "version": "0.0.4",
+    "version": "0.0.5",
+    "type": "module",
     "description": "A prettier config for jiangweiye",
     "author": "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "SEE LICENSE IN LICENSE.md",

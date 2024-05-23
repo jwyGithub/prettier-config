@@ -10,7 +10,6 @@ export default defineConfig({
         };
     },
     dts: true,
-    minify: true,
     cjsInterop: true,
     format: ['esm', 'cjs'],
     clean: true,

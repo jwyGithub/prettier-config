@@ -12,7 +12,7 @@ import type { Options } from 'prettier';
  * @see https://prettier.io/docs/en/options.html
  * @returns {Options}
  */
-function prettier(options?: Options): Options {
+export function prettier(options?: Options): Options {
     return {
         printWidth: 140,
         tabWidth: 4,
@@ -35,6 +35,4 @@ function prettier(options?: Options): Options {
         ...(options || {})
     };
 }
-
-export default prettier;
 
