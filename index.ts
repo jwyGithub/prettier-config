@@ -4,7 +4,7 @@ import type { Options } from 'prettier';
  * @description prettier configuration
  * @returns {Options}
  */
-function prettier(options: Options): Options {
+function prettier(options?: Options): Options {
     return {
         printWidth: 140,
         tabWidth: 4,
@@ -24,7 +24,7 @@ function prettier(options: Options): Options {
         endOfLine: 'lf',
         embeddedLanguageFormatting: 'auto',
         singleAttributePerLine: false,
-        ...options
+        ...(options ?? {})
     };
 }
 
