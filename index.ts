@@ -24,7 +24,7 @@ function prettier(options?: Options): Options {
         endOfLine: 'lf',
         embeddedLanguageFormatting: 'auto',
         singleAttributePerLine: false,
-        ...(options ?? {})
+        ...(options || {})
     };
 }
 
