@@ -1,0 +1,10 @@
+{
+    "extends": "@jiangweiye/tsconfig/tsconfig.node.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "ESNext",
+        "emitDecoratorMetadata": false
+    },
+    "exclude": ["node_modules", "dist"]
+}
+
