@@ -10,7 +10,7 @@ import { Options } from 'prettier';
  *   tabWidth: 4,
  * })
  * @see https://prettier.io/docs/en/options.html
- * @returns {Options}
+ * @returns {Options} options
  */
 declare function prettier(options?: Options): Options;
 

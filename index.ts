@@ -10,7 +10,7 @@ import type { Options } from 'prettier';
  *   tabWidth: 4,
  * })
  * @see https://prettier.io/docs/en/options.html
- * @returns {Options}
+ * @returns {Options} options
  */
 export function prettier(options?: Options): Options {
     return {
@@ -35,4 +35,3 @@ export function prettier(options?: Options): Options {
         ...(options || {})
     };
 }
-

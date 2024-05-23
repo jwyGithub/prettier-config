@@ -16,4 +16,3 @@ export default defineConfig({
     external: ['prettier'],
     tsconfig: path.resolve(__dirname, './tsconfig.json')
 });
-

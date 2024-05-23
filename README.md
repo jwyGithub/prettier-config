@@ -38,4 +38,3 @@ npm install @jiangweiye/prettier-config -D
 import prettierConfig from '@jiangweiye/prettier-config';
 export default prettierConfig();
 ```
-
