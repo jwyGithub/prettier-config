@@ -39,9 +39,10 @@ jobs:
         with:
           node-version: latest
           registry-url: https://registry.npmjs.org/
-      - run: npm publish --access=public
+      - uses: JS-DevTools/npm-publish@v3
         with:
-          registry-url: https://registry.npmjs.org/
-          build: dist
+          token: ${{ secrets.NPM_PUBLISH }}
+          registry: "https://registry.npmjs.org/"
+          package: "dist"
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH}}
