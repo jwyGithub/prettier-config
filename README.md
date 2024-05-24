@@ -15,26 +15,26 @@
 #### with pnpm
 
 ```sh
-pnpm add @jiangweiye/prettier-config -D
+pnpm add @jiangweiye/prettier-config prettier -D
 ```
 
 #### with yarn
 
 ```sh
-yarn add @jiangweiye/prettier-config -D
+yarn add @jiangweiye/prettier-config prettier -D
 ```
 
 #### with npm
 
 ```sh
-npm install @jiangweiye/prettier-config -D
+npm install @jiangweiye/prettier-config prettier -D
 ```
 
 ### use
 
-> prettier.config.mjs
+> prettier.config.js
 
 ```js
-import prettierConfig from '@jiangweiye/prettier-config';
+import { prettier } from '@jiangweiye/prettier-config';
 export default prettierConfig();
 ```

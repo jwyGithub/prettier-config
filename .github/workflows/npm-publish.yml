@@ -40,5 +40,6 @@ jobs:
           node-version: latest
           registry-url: https://registry.npmjs.org/
       - run: npm publish --access=public
+        folder: dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH}}

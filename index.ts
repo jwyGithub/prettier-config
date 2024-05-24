@@ -6,7 +6,7 @@ import type { Options } from 'prettier';
  * @author <jiangweiye@outlook.com>
  * @example
  * prettier({
- *    printWidth: 140,
+ *   printWidth: 140,
  *   tabWidth: 4,
  * })
  * @see https://prettier.io/docs/en/options.html
