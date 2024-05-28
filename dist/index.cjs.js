@@ -19,33 +19,41 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // index.ts
 var prettier_exports = {};
 __export(prettier_exports, {
+  DEFAULT_OPTIONS: () => DEFAULT_OPTIONS,
+  format: () => format,
   prettier: () => prettier
 });
 module.exports = __toCommonJS(prettier_exports);
+var import_prettier = require("prettier");
+var DEFAULT_OPTIONS = {
+  printWidth: 140,
+  tabWidth: 4,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  quoteProps: "as-needed",
+  jsxSingleQuote: true,
+  trailingComma: "none",
+  bracketSpacing: true,
+  bracketSameLine: false,
+  arrowParens: "avoid",
+  insertPragma: false,
+  proseWrap: "never",
+  htmlWhitespaceSensitivity: "strict",
+  vueIndentScriptAndStyle: false,
+  endOfLine: "lf",
+  embeddedLanguageFormatting: "auto",
+  singleAttributePerLine: false
+};
 function prettier(options) {
-  return {
-    printWidth: 140,
-    tabWidth: 4,
-    useTabs: false,
-    semi: true,
-    singleQuote: true,
-    quoteProps: "as-needed",
-    jsxSingleQuote: true,
-    trailingComma: "none",
-    bracketSpacing: true,
-    bracketSameLine: false,
-    arrowParens: "avoid",
-    insertPragma: false,
-    proseWrap: "never",
-    htmlWhitespaceSensitivity: "strict",
-    vueIndentScriptAndStyle: false,
-    endOfLine: "lf",
-    embeddedLanguageFormatting: "auto",
-    singleAttributePerLine: false,
-    ...options || {}
-  };
+  return { ...DEFAULT_OPTIONS, ...options || {} };
+}
+async function format(code, options) {
+  return await (0, import_prettier.format)(code, prettier(options));
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  DEFAULT_OPTIONS,
+  format,
   prettier
 });
