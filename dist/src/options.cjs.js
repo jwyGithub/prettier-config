@@ -16,16 +16,12 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// index.ts
-var prettier_exports = {};
-__export(prettier_exports, {
-  DEFAULT_OPTIONS: () => DEFAULT_OPTIONS,
-  format: () => format,
-  prettier: () => prettier
-});
-module.exports = __toCommonJS(prettier_exports);
-
 // src/options.ts
+var options_exports = {};
+__export(options_exports, {
+  DEFAULT_OPTIONS: () => DEFAULT_OPTIONS
+});
+module.exports = __toCommonJS(options_exports);
 var DEFAULT_OPTIONS = {
   printWidth: 140,
   tabWidth: 4,
@@ -46,20 +42,7 @@ var DEFAULT_OPTIONS = {
   embeddedLanguageFormatting: "auto",
   singleAttributePerLine: false
 };
-
-// src/format.ts
-var import_prettier = require("prettier");
-async function format(code, options) {
-  return await (0, import_prettier.format)(code, { ...DEFAULT_OPTIONS, ...options || {} });
-}
-
-// index.ts
-function prettier(options) {
-  return { ...DEFAULT_OPTIONS, ...options || {} };
-}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  DEFAULT_OPTIONS,
-  format,
-  prettier
+  DEFAULT_OPTIONS
 });

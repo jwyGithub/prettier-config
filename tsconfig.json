@@ -6,7 +6,8 @@
         "baseUrl": ".",
         "moduleResolution": "Node",
         "allowJs": false,
-        "checkJs": false
+        "checkJs": false,
+        "composite": false
     },
     "exclude": ["node_modules", "dist"]
 }

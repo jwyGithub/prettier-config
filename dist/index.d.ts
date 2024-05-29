@@ -1,10 +1,7 @@
 import { Options } from 'prettier';
+export { format } from './src/format.js';
+export { DEFAULT_OPTIONS } from './src/options.js';
 
-/**
- * @description prettier default options
- * @see https://prettier.io/docs/en/options.html
- */
-declare const DEFAULT_OPTIONS: Options;
 /**
  * @description prettier configuration
  * @param {Options} options
@@ -18,12 +15,5 @@ declare const DEFAULT_OPTIONS: Options;
  * @returns {Options} options
  */
 declare function prettier(options?: Options): Options;
-/**
- * @description 格式化代码
- * @param {string} code 代码
- * @param {Options} options 配置
- * @returns  {Promise<string>} 格式化后的代码
- */
-declare function format(code: string, options?: Options): Promise<string>;
 
-export { DEFAULT_OPTIONS, format, prettier };
+export { prettier };

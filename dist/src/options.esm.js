@@ -19,19 +19,6 @@ var DEFAULT_OPTIONS = {
   embeddedLanguageFormatting: "auto",
   singleAttributePerLine: false
 };
-
-// src/format.ts
-import { format as _format } from "prettier";
-async function format(code, options) {
-  return await _format(code, { ...DEFAULT_OPTIONS, ...options || {} });
-}
-
-// index.ts
-function prettier(options) {
-  return { ...DEFAULT_OPTIONS, ...options || {} };
-}
 export {
-  DEFAULT_OPTIONS,
-  format,
-  prettier
+  DEFAULT_OPTIONS
 };
