@@ -1,6 +1,6 @@
-# @jiangweiye/pritter-config
+# @jiangweiye/prettier-config
 
-#### jiangweiye pritter-config
+#### jiangweiye prettier-config
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/@jiangweiye/prettier-config" alt='version'>
@@ -44,11 +44,11 @@ export default prettierConfig();
 > select the configuration file
 
 ```sh
-npx pritter-config
+npx prettier-config
 ```
 
 > use the default configuration file
 
 ```sh
-npx pritter-config -y
+npx prettier-config -y
 ```
