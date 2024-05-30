@@ -9,7 +9,7 @@ import yargs from "yargs";
 var package_default = {
   name: "@jiangweiye/prettier-config",
   type: "module",
-  version: "0.0.12",
+  version: "0.0.13",
   description: "A prettier config for jiangweiye",
   author: "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
   license: "SEE LICENSE IN LICENSE.md",
