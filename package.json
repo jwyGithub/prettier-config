@@ -1,7 +1,7 @@
 {
     "name": "@jiangweiye/prettier-config",
     "type": "module",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "description": "A prettier config for jiangweiye",
     "author": "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "SEE LICENSE IN LICENSE.md",
@@ -13,23 +13,27 @@
         "prettier",
         "config"
     ],
+    "sideEffects": false,
     "exports": {
         ".": {
             "types": "./dist/index.d.ts",
-            "import": "./dist/index.esm.js",
-            "require": "./dist/index.cjs.js"
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
         },
         "./options": {
             "types": "./dist/src/options.d.ts",
-            "import": "./dist/src/options.esm.js",
-            "require": "./dist/src/options.cjs.js"
+            "import": "./dist/src/options.cjs",
+            "require": "./dist/src/options.js"
         },
         "./format": {
             "types": "./dist/src/format.d.ts",
-            "import": "./dist/src/format.esm.js",
-            "require": "./dist/src/format.cjs.js"
+            "import": "./dist/src/format.js",
+            "require": "./dist/src/format.cjs"
         }
     },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "typesVersions": {
         ".": {
             "*": [
@@ -43,30 +47,39 @@
             ]
         }
     },
-    "main": "./dist/index.cjs.js",
-    "module": "./dist/index.esm.js",
-    "types": "./dist/index.d.ts",
+    "bin": {
+        "pritter-config": "bin/index.js"
+    },
     "files": [
+        "bin",
         "dist"
     ],
     "scripts": {
         "build": "tsup",
+        "cli": "esno src/cli/cli.ts",
         "format": "prettier --write .",
         "lint": "eslint .",
         "lint:fix": "eslint --fix ."
+    },
+    "dependencies": {
+        "@clack/prompts": "^0.7.0",
+        "picocolors": "^1.0.1",
+        "prettier": "^3.2.5",
+        "yargs": "^17.7.2"
     },
     "optionalDependencies": {
         "prettier": "^3.2.5"
     },
     "devDependencies": {
-        "@jiangweiye/eslint-config": "0.1.3-beta.1",
+        "@jiangweiye/eslint-config": "0.1.5-beta.2",
         "@jiangweiye/prettier-config": "workspace:*",
         "@jiangweiye/tsconfig": "^0.0.11",
-        "@types/node": "^20.12.12",
+        "@types/node": "^20.12.13",
+        "@types/yargs": "^17.0.32",
         "eslint": "^9.3.0",
         "eslint-plugin-format": "^0.1.1",
+        "esno": "^4.7.0",
         "tsup": "^8.0.2",
         "typescript": "^5.4.5"
-    },
-    "sideEffects": false
+    }
 }

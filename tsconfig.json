@@ -1,13 +1,13 @@
 {
     "extends": "@jiangweiye/tsconfig/tsconfig.node.json",
     "compilerOptions": {
+        "composite": false,
         "target": "ESNext",
         "emitDecoratorMetadata": false,
         "baseUrl": ".",
         "moduleResolution": "Node",
         "allowJs": false,
-        "checkJs": false,
-        "composite": false
+        "checkJs": false
     },
     "exclude": ["node_modules", "dist"]
 }

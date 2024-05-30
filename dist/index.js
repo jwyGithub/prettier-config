@@ -1,6 +1,3 @@
-// src/format.ts
-import { format as _format } from "prettier";
-
 // src/options.ts
 var DEFAULT_OPTIONS = {
   printWidth: 140,
@@ -24,9 +21,17 @@ var DEFAULT_OPTIONS = {
 };
 
 // src/format.ts
-async function format(code, options) {
-  return await _format(code, { ...DEFAULT_OPTIONS, ...options || {} });
+import * as prettier from "prettier";
+async function format2(code, options) {
+  return await prettier.format(code, { ...DEFAULT_OPTIONS, ...options || {} });
+}
+
+// index.ts
+function prettier2(options) {
+  return { ...DEFAULT_OPTIONS, ...options || {} };
 }
 export {
-  format
+  DEFAULT_OPTIONS,
+  format2 as format,
+  prettier2 as prettier
 };

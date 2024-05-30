@@ -1,4 +1,4 @@
-import { format as _format } from 'prettier';
+import * as prettier from 'prettier';
 import type { Options } from 'prettier';
 import { DEFAULT_OPTIONS } from './options';
 
@@ -9,5 +9,5 @@ import { DEFAULT_OPTIONS } from './options';
  * @returns  {Promise<string>} 格式化后的代码
  */
 export async function format(code: string, options?: Options): Promise<string> {
-    return await _format(code, { ...DEFAULT_OPTIONS, ...(options || {}) });
+    return await prettier.format(code, { ...DEFAULT_OPTIONS, ...(options || {}) });
 }

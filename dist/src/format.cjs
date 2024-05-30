@@ -1,6 +1,8 @@
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -14,16 +16,23 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// index.ts
-var prettier_exports = {};
-__export(prettier_exports, {
-  DEFAULT_OPTIONS: () => DEFAULT_OPTIONS,
-  format: () => format,
-  prettier: () => prettier
+// src/format.ts
+var format_exports = {};
+__export(format_exports, {
+  format: () => format2
 });
-module.exports = __toCommonJS(prettier_exports);
+module.exports = __toCommonJS(format_exports);
+var prettier = __toESM(require("prettier"), 1);
 
 // src/options.ts
 var DEFAULT_OPTIONS = {
@@ -48,18 +57,10 @@ var DEFAULT_OPTIONS = {
 };
 
 // src/format.ts
-var import_prettier = require("prettier");
-async function format(code, options) {
-  return await (0, import_prettier.format)(code, { ...DEFAULT_OPTIONS, ...options || {} });
-}
-
-// index.ts
-function prettier(options) {
-  return { ...DEFAULT_OPTIONS, ...options || {} };
+async function format2(code, options) {
+  return await prettier.format(code, { ...DEFAULT_OPTIONS, ...options || {} });
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  DEFAULT_OPTIONS,
-  format,
-  prettier
+  format
 });
