@@ -27,13 +27,13 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // index.ts
-var prettier_exports = {};
-__export(prettier_exports, {
+var prettier_config_exports = {};
+__export(prettier_config_exports, {
   DEFAULT_OPTIONS: () => DEFAULT_OPTIONS,
   format: () => format2,
   prettier: () => prettier2
 });
-module.exports = __toCommonJS(prettier_exports);
+module.exports = __toCommonJS(prettier_config_exports);
 
 // src/options.ts
 var DEFAULT_OPTIONS = {

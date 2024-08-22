@@ -72,23 +72,23 @@ var package_default = {
   dependencies: {
     "@clack/prompts": "^0.7.0",
     picocolors: "^1.0.1",
-    prettier: "^3.2.5",
+    prettier: "^3.3.3",
     yargs: "^17.7.2"
   },
   optionalDependencies: {
-    prettier: "^3.2.5"
+    prettier: "^3.3.3"
   },
   devDependencies: {
-    "@jiangweiye/eslint-config": "0.1.5-beta.2",
+    "@jiangweiye/eslint-config": "0.1.8-beta.1",
     "@jiangweiye/prettier-config": "workspace:*",
     "@jiangweiye/tsconfig": "^0.0.11",
-    "@types/node": "^20.12.13",
-    "@types/yargs": "^17.0.32",
-    eslint: "^9.3.0",
-    "eslint-plugin-format": "^0.1.1",
+    "@types/node": "^22.5.0",
+    "@types/yargs": "^17.0.33",
+    eslint: "^8.56.0",
+    "eslint-plugin-format": "^0.1.2",
     esno: "^4.7.0",
-    tsup: "^8.0.2",
-    typescript: "^5.4.5"
+    tsup: "^8.2.4",
+    typescript: "^5.5.4"
   }
 };
 
