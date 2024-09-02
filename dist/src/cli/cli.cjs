@@ -42,7 +42,7 @@ var import_yargs = __toESM(require("yargs"), 1);
 var package_default = {
   name: "@jiangweiye/prettier-config",
   type: "module",
-  version: "0.0.14",
+  version: "0.0.15",
   description: "A prettier config for jiangweiye",
   author: "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
   license: "SEE LICENSE IN LICENSE.md",
@@ -225,7 +225,7 @@ function header() {
   console.log("\n");
   p2.intro(`${import_picocolors2.default.green(package_default.name)}${import_picocolors2.default.dim(`v${package_default.version}`)}`);
 }
-var instance = (0, import_yargs.default)((0, import_helpers.hideBin)(import_node_process2.default.argv)).scriptName("@jiangweiye/eslint-config").usage("").command(
+var instance = (0, import_yargs.default)((0, import_helpers.hideBin)(import_node_process2.default.argv)).scriptName("@jiangweiye/prettier-config").usage("").command(
   "*",
   "Run the initialization or migration",
   (args) => args.option("yes", {

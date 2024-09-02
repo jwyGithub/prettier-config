@@ -26,7 +26,7 @@ function header() {
 }
 
 const instance = yargs(hideBin(process.argv))
-    .scriptName('@jiangweiye/eslint-config')
+    .scriptName('@jiangweiye/prettier-config')
     .usage('')
     .command(
         '*',

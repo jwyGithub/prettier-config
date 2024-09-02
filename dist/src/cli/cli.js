@@ -9,7 +9,7 @@ import yargs from "yargs";
 var package_default = {
   name: "@jiangweiye/prettier-config",
   type: "module",
-  version: "0.0.14",
+  version: "0.0.15",
   description: "A prettier config for jiangweiye",
   author: "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
   license: "SEE LICENSE IN LICENSE.md",
@@ -192,7 +192,7 @@ function header() {
   console.log("\n");
   p2.intro(`${c2.green(package_default.name)}${c2.dim(`v${package_default.version}`)}`);
 }
-var instance = yargs(hideBin(process2.argv)).scriptName("@jiangweiye/eslint-config").usage("").command(
+var instance = yargs(hideBin(process2.argv)).scriptName("@jiangweiye/prettier-config").usage("").command(
   "*",
   "Run the initialization or migration",
   (args) => args.option("yes", {
