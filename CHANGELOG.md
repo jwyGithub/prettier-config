@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.18](https://github.com/jwyGithub/prettier-config/compare/v0.0.17...v0.0.18) (2024-10-15)
+
+
+### Bug Fixes
+
+* update release yml ([88a069d](https://github.com/jwyGithub/prettier-config/commit/88a069d32ae1fbb52b22943f5c87d55b7bc96f87))
+* update release yml ([749a3cd](https://github.com/jwyGithub/prettier-config/commit/749a3cda4f577c0ff494d147731ae10aa4ccb2b4))
+
 ### 0.0.17 (2024-10-15)
 
 
