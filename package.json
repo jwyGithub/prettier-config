@@ -57,9 +57,11 @@
     "scripts": {
         "build": "tsup",
         "cli": "esno src/cli/cli.ts",
-        "format": "prettier --write .",
         "lint": "eslint .",
-        "lint:fix": "eslint --fix ."
+        "lint:fix": "eslint --fix .",
+        "prettier": "pnpx prettier --write .",
+        "lint-staged": "lint-staged",
+        "release": "standard-version"
     },
     "dependencies": {
         "@clack/prompts": "^0.7.0",
@@ -71,15 +73,26 @@
         "prettier": "^3.3.3"
     },
     "devDependencies": {
-        "@jiangweiye/eslint-config": "0.1.8-beta.1",
+        "@jiangweiye/eslint-config": "0.1.9",
         "@jiangweiye/prettier-config": "workspace:*",
         "@jiangweiye/tsconfig": "^0.0.11",
         "@types/node": "^22.5.0",
         "@types/yargs": "^17.0.33",
-        "eslint": "^8.56.0",
+        "eslint": "^9.9.1",
         "eslint-plugin-format": "^0.1.2",
         "esno": "^4.7.0",
+        "lint-staged": "^15.2.10",
+        "standard-version": "^9.5.0",
         "tsup": "^8.2.4",
         "typescript": "^5.5.4"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "pnpm lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,ts}": [
+            "pnpm lint",
+            "pnpm prettier"
+        ]
     }
 }
