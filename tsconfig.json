@@ -1,5 +1,5 @@
 {
-    "extends": "@jiangweiye/tsconfig/tsconfig.node.json",
+    "extends": "@janone/tsconfig/tsconfig.node.json",
     "compilerOptions": {
         "composite": false,
         "target": "ESNext",
@@ -7,7 +7,8 @@
         "baseUrl": ".",
         "moduleResolution": "Node",
         "allowJs": false,
-        "checkJs": false
+        "checkJs": false,
+        "declaration": true
     },
     "exclude": ["node_modules", "dist"]
 }

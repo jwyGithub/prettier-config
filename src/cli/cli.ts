@@ -1,11 +1,11 @@
+import type { Result } from './types';
 import process from 'node:process';
 import * as p from '@clack/prompts';
 import c from 'picocolors';
-import { hideBin } from 'yargs/helpers';
 import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 import pkgJson from '../../package.json';
 import updateConfigFile from './update-config-file';
-import type { Result } from './types';
 
 export const fileType = [
     { label: '.prettierrc', value: { type: 'JSON', fileName: '.prettierrc' } },
@@ -20,13 +20,12 @@ export const fileType = [
 ];
 
 function header() {
-    // eslint-disable-next-line no-console
     console.log('\n');
     p.intro(`${c.green(pkgJson.name)}${c.dim(`v${pkgJson.version}`)}`);
 }
 
 const instance = yargs(hideBin(process.argv))
-    .scriptName('@jiangweiye/prettier-config')
+    .scriptName('@janone/prettier-config')
     .usage('')
     .command(
         '*',

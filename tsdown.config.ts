@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 const entry = [
     path.resolve(__dirname, './src/format.ts'),
@@ -15,7 +15,6 @@ export default defineConfig({
     format: ['esm', 'cjs'],
     clean: true,
     external: ['prettier'],
-    splitting: false,
     tsconfig: path.resolve(__dirname, './tsconfig.json'),
     shims: true
 });

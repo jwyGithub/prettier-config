@@ -1,10 +1,10 @@
+import type { Result } from './types';
 import * as fs from 'node:fs';
-import process from 'node:process';
 import path from 'node:path';
+import process from 'node:process';
 import * as p from '@clack/prompts';
 import c from 'picocolors';
 import { DEFAULT_OPTIONS } from '../options';
-import type { Result } from './types';
 
 function hasConfigFile(fileName: string) {
     const cwd = process.cwd();

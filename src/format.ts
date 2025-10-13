@@ -1,5 +1,5 @@
-import * as prettier from 'prettier';
 import type { Options } from 'prettier';
+import * as prettier from 'prettier';
 import { DEFAULT_OPTIONS } from './options';
 
 /**

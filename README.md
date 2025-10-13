@@ -1,10 +1,10 @@
-# @jiangweiye/prettier-config
+# @janone/prettier-config
 
-#### jiangweiye prettier-config
+#### janone prettier-config
 
 <p align="center">
-  <img src="https://img.shields.io/npm/v/@jiangweiye/prettier-config" alt='version'>
-  <img src="https://img.shields.io/npm/dm/@jiangweiye/prettier-config" alt='download'>
+  <img src="https://img.shields.io/npm/v/@janone/prettier-config" alt='version'>
+  <img src="https://img.shields.io/npm/dm/@janone/prettier-config" alt='download'>
   <img src="https://img.shields.io/github/issues/jwyGithub/prettier" alt='issues'>
   <img src="https://img.shields.io/github/license/jwyGithub/prettier" alt='license'>
 </p>
@@ -15,19 +15,19 @@
 #### with pnpm
 
 ```sh
-pnpm add @jiangweiye/prettier-config prettier -D
+pnpm add @janone/prettier-config prettier -D
 ```
 
 #### with yarn
 
 ```sh
-yarn add @jiangweiye/prettier-config prettier -D
+yarn add @janone/prettier-config prettier -D
 ```
 
 #### with npm
 
 ```sh
-npm install @jiangweiye/prettier-config prettier -D
+npm install @janone/prettier-config prettier -D
 ```
 
 ### use
@@ -35,8 +35,8 @@ npm install @jiangweiye/prettier-config prettier -D
 > prettier.config.mjs
 
 ```js
-import { prettier } from '@jiangweiye/prettier-config';
-export default prettierConfig();
+import { prettier } from '@janone/prettier-config';
+export default prettier();
 ```
 
 ### use cli
@@ -44,11 +44,11 @@ export default prettierConfig();
 > select the configuration file
 
 ```sh
-npx prettier-config
+pnpm dlx @janone/prettier-config
 ```
 
 > use the default configuration file
 
 ```sh
-npx prettier-config -y
+pnpm dlx @janone/prettier-config -y
 ```

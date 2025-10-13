@@ -1,11 +1,11 @@
 {
-    "name": "@jiangweiye/prettier-config",
+    "name": "@janone/prettier-config",
     "type": "module",
-    "version": "0.0.18",
-    "description": "A prettier config for jiangweiye",
-    "author": "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
+    "version": "0.0.1",
+    "description": "A prettier config for janone",
+    "author": "janone <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "SEE LICENSE IN LICENSE.md",
-    "homepage": "https://github.com/jwyGithub/prettier",
+    "homepage": "https://github.com/jwyGithub/prettier-config",
     "publishConfig": {
         "access": "public"
     },
@@ -20,16 +20,17 @@
             "import": "./dist/index.js",
             "require": "./dist/index.cjs"
         },
-        "./options": {
-            "types": "./dist/src/options.d.ts",
-            "import": "./dist/src/options.cjs",
-            "require": "./dist/src/options.js"
-        },
         "./format": {
             "types": "./dist/src/format.d.ts",
             "import": "./dist/src/format.js",
             "require": "./dist/src/format.cjs"
-        }
+        },
+        "./options": {
+            "types": "./dist/src/options.d.ts",
+            "import": "./dist/src/options.js",
+            "require": "./dist/src/options.cjs"
+        },
+        "./*": "./*"
     },
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
@@ -55,13 +56,12 @@
         "dist"
     ],
     "scripts": {
-        "build": "tsup",
+        "build": "tsdown",
         "cli": "esno src/cli/cli.ts",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "prettier": "pnpx prettier --write .",
-        "lint-staged": "lint-staged",
-        "release": "standard-version"
+        "lint-staged": "lint-staged"
     },
     "dependencies": {
         "@clack/prompts": "^0.7.0",
@@ -70,20 +70,18 @@
         "yargs": "^17.7.2"
     },
     "optionalDependencies": {
-        "prettier": "^3.3.3"
+        "prettier": "^3.6.2"
     },
     "devDependencies": {
-        "@jiangweiye/eslint-config": "0.1.9",
-        "@jiangweiye/prettier-config": "workspace:*",
-        "@jiangweiye/tsconfig": "^0.0.11",
+        "@janone/prettier-config": "workspace:*",
+        "@janone/tsconfig": "^0.0.1",
+        "@jiangweiye/eslint-config": "^0.1.15",
         "@types/node": "^22.5.0",
         "@types/yargs": "^17.0.33",
-        "eslint": "^9.9.1",
-        "eslint-plugin-format": "^0.1.2",
+        "eslint": "^9.37.0",
         "esno": "^4.7.0",
         "lint-staged": "^15.2.10",
-        "standard-version": "^9.5.0",
-        "tsup": "^8.2.4",
+        "tsdown": "^0.15.6",
         "typescript": "^5.5.4"
     },
     "simple-git-hooks": {
