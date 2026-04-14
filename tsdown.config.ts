@@ -18,7 +18,9 @@ export default defineConfig({
     dts: true,
     format: ['esm', 'cjs'],
     clean: true,
-    external: ['prettier'],
     tsconfig: path.resolve(__dirname, './tsconfig.json'),
-    shims: true
+    shims: true,
+    deps: {
+        neverBundle: ['prettier']
+    }
 });

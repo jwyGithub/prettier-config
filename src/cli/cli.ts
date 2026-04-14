@@ -25,7 +25,7 @@ function header() {
 }
 
 const instance = yargs(hideBin(process.argv))
-    .scriptName('@janone/prettier-config')
+    .scriptName('@jawyn/prettier-config')
     .usage('')
     .command(
         '*',

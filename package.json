@@ -1,9 +1,9 @@
 {
-    "name": "@janone/prettier-config",
+    "name": "@jawyn/prettier-config",
     "type": "module",
     "version": "0.0.1",
-    "description": "A prettier config for janone",
-    "author": "janone <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
+    "description": "A prettier config for jawyn",
+    "author": "jawyn <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "SEE LICENSE IN LICENSE.md",
     "homepage": "https://github.com/jwyGithub/prettier-config",
     "publishConfig": {
@@ -16,35 +16,35 @@
     "sideEffects": false,
     "exports": {
         ".": {
-            "types": "./dist/index.d.ts",
-            "import": "./dist/index.js",
+            "types": "./dist/index.d.mts",
+            "import": "./dist/index.mjs",
             "require": "./dist/index.cjs"
         },
         "./format": {
-            "types": "./dist/src/format.d.ts",
-            "import": "./dist/src/format.js",
+            "types": "./dist/src/format.d.mts",
+            "import": "./dist/src/format.mjs",
             "require": "./dist/src/format.cjs"
         },
         "./options": {
-            "types": "./dist/src/options.d.ts",
-            "import": "./dist/src/options.js",
+            "types": "./dist/src/options.d.mts",
+            "import": "./dist/src/options.mjs",
             "require": "./dist/src/options.cjs"
         },
         "./*": "./*"
     },
     "main": "./dist/index.cjs",
-    "module": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.mts",
     "typesVersions": {
         ".": {
             "*": [
-                "./dist/index.d.ts"
+                "./dist/index.d.mts"
             ],
             "options": [
-                "./dist/src/options.d.ts"
+                "./dist/src/options.d.mts"
             ],
             "format": [
-                "./dist/src/format.d.ts"
+                "./dist/src/format.d.mts"
             ]
         }
     },
@@ -58,8 +58,6 @@
     "scripts": {
         "build": "tsdown",
         "cli": "esno src/cli/cli.ts",
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix .",
         "prettier": "pnpx prettier --write .",
         "lint-staged": "lint-staged"
     },
@@ -73,15 +71,13 @@
         "prettier": "^3.6.2"
     },
     "devDependencies": {
-        "@janone/prettier-config": "workspace:*",
-        "@janone/tsconfig": "^0.0.1",
-        "@jiangweiye/eslint-config": "^0.1.15",
+        "@jawyn/prettier-config": "workspace:*",
+        "@jawyn/tsconfig": "^0.0.1",
         "@types/node": "^22.5.0",
         "@types/yargs": "^17.0.33",
-        "eslint": "^9.37.0",
-        "esno": "^4.7.0",
+        "esno": "^4.8.0",
         "lint-staged": "^15.2.10",
-        "tsdown": "^0.15.6",
+        "tsdown": "^0.21.8",
         "typescript": "^5.5.4"
     },
     "simple-git-hooks": {
@@ -89,7 +85,6 @@
     },
     "lint-staged": {
         "*.{js,ts}": [
-            "pnpm lint",
             "pnpm prettier"
         ]
     }

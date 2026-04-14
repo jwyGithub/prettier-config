@@ -1,5 +1,5 @@
 {
-    "extends": "@janone/tsconfig/tsconfig.node.json",
+    "extends": "@jawyn/tsconfig/tsconfig.node.json",
     "compilerOptions": {
         "composite": false,
         "target": "ESNext",
