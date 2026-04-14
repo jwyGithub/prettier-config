@@ -1,5 +1,0 @@
-packages:
-  - fixtures/*
-
-onlyBuiltDependencies:
-  - esbuild
